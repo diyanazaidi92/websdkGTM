@@ -64,16 +64,7 @@ pe.init('8dbf14630365928c5cdd672534a9f29a-0a769b9b-dc7d-453e-b98d-8feb964a1bb6')
         email,
         phone,
       };
-try {
-          // Set person data in Infobip
-          pe.setPerson(person, 3000); // TTL set to 3600 seconds (1 hour)
 
-          // Track sign-up event
-          pe.track("signup", {
-            user_id: email,
-            last_name: lastName,
-            first_name: firstName,
-          });
       saveUser(person);
       
       window.dataLayer.push({'user_id': email, 'last_name':lastName, 'first_name':firstName, 'event': 'signup'});
